@@ -60,8 +60,10 @@ header{
 }
 .container-principal .contenido-conteiner .contenido .caja-de-3
 {
-	background: red;
-	float: blue;
+	width: 400px;
+	height: 100%;
+	background: purple;
+	float: left;
 } 
 
 /* Breakpoint inicial, la minima resolucion es 400px, para lo que sigue se empieza a cambiar propiedades */
@@ -87,6 +89,10 @@ header{
 	{
 		width: 410px;
 	}
+	.container-principal .contenido-conteiner .contenido .caja-de-3
+	{
+		width: 410px;
+	}
 }
 @media screen and (min-width: 480px){
 	.container-principal
@@ -98,6 +104,10 @@ header{
 	.container-principal .contenido-conteiner .contenido
 	{
 		min-width: 410px;
+	}
+.container-principal .contenido-conteiner .contenido .caja-de-3
+	{
+		width: 615px;
 	}
 }
 @media screen and (min-width: 640px){

@@ -1,0 +1,190 @@
+body
+{
+	border: 0 0 0 0;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+header{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.seccion-container
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	
+	padding-left: 0%;
+	padding-right: 0%;
+	width: 100%;
+
+  	/* Para que el contenedor sea maximo a 1024px y siempre quede centrado */
+  	margin: 0 auto;
+  	max-width: 1024px;
+  	overflow: hidden;
+  	background: gray;
+}
+.seccion-container .col2-aside
+{
+	width: 304px;
+	display: none;
+	background: yellow;
+
+}
+.seccion-container .col1-container .contenido-container
+{
+	clear: left;
+	width: 100%;
+	background: red;
+	overflow: hidden;
+	max-width: 720px;
+	float: left;
+}
+.seccion-container .col1-container .contenido-container .contenido .caja-de-1-small
+{
+	width: 400px;
+	height: 100%;
+	background: orange;
+	float: left;
+}
+.seccion-container .col1-container .contenido-container .contenido .caja-de-1
+{
+	width: 400px;
+	height: 100%;
+	background: orange;
+	float: left;
+}
+.seccion-container .col1-container .contenido-container .contenido .aside
+{
+	width: 205px;
+	height: 100%;
+	background: green;
+	float: left;
+	display: none;
+}
+.seccion-container .col1-container .contenido-container .contenido .caja-de-2
+{
+	width: 400px;
+	height: 100%;
+	background: blue;
+	float: left;
+}
+.seccion-container .col1-container .contenido-container .contenido .caja-de-3
+{
+	width: 400px;
+	height: 100%;
+	background: purple;
+	float: left;
+} 
+
+/* Breakpoint inicial, la minima resolucion es 400px, para lo que sigue se empieza a cambiar propiedades */
+@media screen and (min-width: 400px){
+	.seccion-container
+	{
+		/* Padding hasta el prox breakpoint de resolucion 480 */
+		padding-left: 0%;
+		padding-right: 0%;
+		width: 100%;
+	}
+}
+@media screen and (min-width: 414px){
+	.seccion-container
+	{
+
+	}
+	.seccion-container .col1-container .contenido-container .contenido .caja-de-1-small
+	{
+		width: 122.4px;
+	}
+	.seccion-container .col1-container .contenido-container .contenido .caja-de-1
+	{
+		width: 248.4px;
+	}
+	.seccion-container .col1-container .contenido-container .contenido .caja-de-2
+	{
+		width: 496.8px;
+	}
+	.seccion-container .col1-container .contenido-container .contenido .caja-de-3
+	{
+		width: 410px;
+	}
+
+
+}
+@media screen and (min-width: 480px){
+	.seccion-container
+	{
+		padding-left: 3%;
+		padding-right: 3%;
+		width: 94%;
+	}
+	.seccion-container .col1-container .contenido-container .contenido
+	{
+		min-width: 410px;
+	}
+.seccion-container .col1-container .contenido-container .contenido .caja-de-3
+	{
+		width: 662.4px;
+	}
+}
+@media screen and (min-width: 640px){
+	.seccion-container
+	{
+		padding-left: 3%;
+		padding-right: 3%;
+		width: 96%;
+	}
+	.seccion-container .col1-container .contenido-container .contenido
+	{
+		max-width: 662.4px;
+	}
+}
+@media screen and (min-width: 720px){
+	.seccion-container
+	{
+		padding-left: 7%;
+		padding-right: 7%;
+		width: 86%;
+	}
+	.seccion-container .col1-container .contenido-container .contenido
+	{
+		max-width: 662.4px;
+	}
+}
+@media screen and (min-width: 800px){
+	.seccion-container
+	{
+		padding-left: 7%;
+		padding-right: 7%;
+		width: 86%;
+	}
+	.seccion-container .col1-container .contenido-container .contenido
+	{
+		max-width: 662.4px;
+	}
+}
+@media screen and (min-width: 1024px){
+	.seccion-container
+	{
+		padding-left: 10%;
+		padding-right: 10%;
+		width: 80%;
+	}
+	.seccion-container .col1-container .contenido-container .contenido
+	{
+		max-width: 720px;
+	}
+	.seccion-container .col1-container .contenido-container .contenido .aside
+	{
+		display: block;
+	}
+	.seccion-container .col2-aside
+	{
+		display: block;
+		float: right;
+	}	
+}
