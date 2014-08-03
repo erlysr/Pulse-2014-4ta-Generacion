@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onresize event example</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="estilos-header.css">
+    
+    <script type="text/javascript">
+        function OnResize (blueDiv) {
+            var w = blueDiv.offsetWidth;
+            var h = blueDiv.offsetHeight;
+            alert ("The size of the blue element will change to " + w + " * " + h);
+        }
+    </script>
+</head>
+<body>
+    <section class="blueDiv" onresize="OnResize (this);"></section>
+    <figure>
+        <img class="imagen-banner-monarca" src="T_Marques.jpeg"/>
+    </figure>            
+</body>
+</html>

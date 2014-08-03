@@ -1,0 +1,39 @@
+#contenedor
+{
+	
+	
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+#contenedor .renglon
+{
+	width: 100%;
+	background: orange;
+	clear: left;
+	min-width: 320px;
+	max-width: 1000px;
+}
+#contenedor .renglon .caja-chica
+{
+	float: left;
+	width: 160px;
+	background: yellow;
+	display: inline-block;
+}
+#contenedor .renglon .caja-simple
+{
+	float: left;
+	width: 320px;
+	background: blue;
+	display: inline-block;
+}
+#contenedor .renglon .caja-doble
+{
+	float: left;
+	background: red;
+	width: 640px;
+	display: inline-block;
+}

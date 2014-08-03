@@ -1,0 +1,82 @@
+#contenedor
+{
+	
+	
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+#contenedor .caja-renglonde2,
+#contenedor .caja-renglonde3
+{
+	min-width: 320px;
+	max-width: 1000px;
+}
+#contenedor .caja-renglonde2 .caja1,
+#contenedor .caja-renglonde3 .caja1
+{
+	min-width: 160px;
+	background: yellow;
+	
+	text-align: left;
+	display: inline-block;
+	float: left;
+}
+#contenedor .caja-renglonde2 .caja2
+{
+	background: orange;
+	min-width: 320px;
+	width: 640px;
+
+	text-align: left;
+	display: inline-block;
+	float: left;
+}
+#contenedor .caja-renglonde3 .caja2
+{
+	min-width: 320px;
+	background: red;
+	
+	text-align: left;
+	display: inline-block;
+	float: left;
+}
+
+#contenedor .caja-renglonde3 .caja2 .caja21,
+#contenedor .caja-renglonde3 .caja2 .caja22
+{
+	display: inline-block;
+	float: left;
+	
+	min-width: 320px;
+	width: 320px;
+}
+
+#contenedor .caja-renglonde3 .caja2 .caja21
+{
+	background: green;
+}
+#contenedor .caja-renglonde3 .caja2 .caja22
+{
+	background: gray;
+}
+@media screen and (max-width: 816px){
+	#contenedor
+	{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 655px){
+	#contenedor .caja-renglonde3 .caja2
+	{
+		width: 320px;
+	}
+	#contenedor .caja-renglonde2 .caja2
+	{
+		width: 320px;
+	}
+}

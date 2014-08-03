@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- /* Oficina 6:45pm */ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>	
+	<title>Header Resize con Javascript</title>
+
+	<link rel="stylesheet" type="text/css" href="estilos-header.css">
+
+	<script type="text/javascript">
+        function OnResize (blueDiv) {
+        	var w = blueDiv.offsetWidth;
+            var h = blueDiv.offsetHeight;
+            alert ("The size of the blue element will change to " + w + " * " + h);
+        }
+    </script>
+
+</head>
+<body id="contenido">
+	
+	<section class="section-banner-monarca" onresize="OnResize(this);">
+	</section>
+
+	<div class="div-banner-monarca">
+		hola
+	</div> 
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+body
+{
+	border: 0 0 0 0;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+header{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.container-principal
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	
+	padding-left: 0%;
+	padding-right: 0%;
+	width: 100%;
+
+  	/* Para que el contenedor sea maximo a 1024px y siempre quede centrado */
+  	margin: 0 auto;
+  	max-width: 1024px;
+  	overflow: hidden;
+  	background: gray;
+}
+.container-principal .contenido-conteiner
+{
+	clear: left;
+	width: 100%;
+	background: red;
+	overflow: hidden;
+	max-width: 820px;
+}
+.container-principal .contenido-conteiner .contenido .caja-de-1
+{
+	width: 400px;
+	height: 100%;
+	background: orange;
+	float: left;
+}
+.container-principal .contenido-conteiner .contenido .aside
+{
+	width: 205px;
+	height: 100%;
+	background: green;
+	float: left;
+	display: none;
+}
+.container-principal .contenido-conteiner .contenido .caja-de-2
+{
+	width: 400px;
+	height: 100%;
+	background: blue;
+	float: left;
+}
+.container-principal .contenido-conteiner .contenido .caja-de-3
+{
+	background: red;
+	float: blue;
+} 
+
+/* Breakpoint inicial, la minima resolucion es 400px, para lo que sigue se empieza a cambiar propiedades */
+@media screen and (min-width: 400px){
+	.container-principal
+	{
+		/* Padding hasta el prox breakpoint de resolucion 480 */
+		padding-left: 0%;
+		padding-right: 0%;
+		width: 100%;
+	}
+}
+@media screen and (min-width: 410px){
+	.container-principal
+	{
+
+	}
+	.container-principal .contenido-conteiner .contenido .caja-de-1
+	{
+		width: 205px;
+	}
+	.container-principal .contenido-conteiner .contenido .caja-de-2
+	{
+		width: 410px;
+	}
+}
+@media screen and (min-width: 480px){
+	.container-principal
+	{
+		padding-left: 3%;
+		padding-right: 3%;
+		width: 94%;
+	}
+	.container-principal .contenido-conteiner .contenido
+	{
+		min-width: 410px;
+	}
+}
+@media screen and (min-width: 640px){
+	.container-principal
+	{
+		padding-left: 6%;
+		padding-right: 6%;
+		width: 88%;
+	}
+	.container-principal .contenido-conteiner .contenido
+	{
+		min-width: 615px;
+	}
+}
+@media screen and (min-width: 800px){
+	.container-principal
+	{
+		padding-left: 7%;
+		padding-right: 7%;
+		width: 86%;
+	}
+	.container-principal .contenido-conteiner .contenido
+	{
+		min-width: 615px;
+	}
+@media screen and (min-width: 1024px){
+	.container-principal
+	{
+		padding-left: 10%;
+		padding-right: 10%;
+		width: 80%;
+	}
+	.container-principal .contenido-conteiner .contenido
+	{
+		min-width: 820px;
+	}
+	.container-principal .contenido-conteiner .contenido .aside
+	{
+		display: block;
+	}
+}

@@ -1,0 +1,58 @@
+.blueDiv {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: blue;
+        }
+a 
+{
+	color: #22BCE0;
+}
+body
+{
+    background: gray;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: #aaaeb0;
+}
+figure
+{
+	margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#contenido .imagen-banner-monarca
+{
+	background: #f5f5f5;
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: inline-block;
+}
+#contenido .section-banner-monarca
+{
+	background: red;
+	background: url(T_Marques.jpeg);
+
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+}
+#contenido .div-banner-monarca
+{
+	background: red;
+	max-width: 100%;
+	height: auto;
+	background: url(T_Marques.jpeg);
+	position: relative;
+	display: inline-block;
+}
+}
