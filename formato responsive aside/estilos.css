@@ -8,82 +8,86 @@ header{
 	border: 0;
 	margin: 0;
 	padding: 0;
-	position: relative;
-	top: 0px;
-	left: 0px;
 }
 .seccion-container
-{
-	position: relative;
-	top: 0;
-	left: 0;
-	
+{	
 	padding-left: 0%;
 	padding-right: 0%;
 	width: 100%;
 
   	/* Para que el contenedor sea maximo a 1024px y siempre quede centrado */
   	margin: 0 auto;
-  	max-width: 1024px;
   	overflow: hidden;
   	background: gray;
 }
-.seccion-container .col2-aside
+.seccion-container .contenido-container
 {
-	width: 304px;
+	width: 100%;
+	min-width: 320px;
+	max-width: 1024px;
+	background: green;
+}
+.seccion-container .contenido-container .col2-aside /* OJO FALTA checar que se apile abajo en resoluciones menores de 1024px */
+{
+	width: 100%;
+	max-width: 254px; /* OJO CHECAR debe ser de 304px */
 	display: none;
 	background: yellow;
-
 }
-.seccion-container .col1-container .contenido-container
+.seccion-container .contenido-container .col1-container
 {
-	clear: left;
 	width: 100%;
+	max-width: 619.2px;
 	background: red;
 	overflow: hidden;
-	max-width: 720px;
 	float: left;
 }
-.seccion-container .col1-container .contenido-container .contenido .caja-de-1-small
+.seccion-container .contenido-container .col1-container .ren-contenido
 {
-	width: 400px;
+	width: 100%;
+	max-width: 619.2px;
+	clear: left;
+}
+.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-1-small
+{
+	width: 100%;
+	/* Tamaño fijo de 320px resolucion minima de smartphones */
+	min-width: 320px;
+	max-width: 320px;
 	height: 100%;
 	background: orange;
 	float: left;
 }
-.seccion-container .col1-container .contenido-container .contenido .caja-de-1
+.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-1
 {
-	width: 400px;
+	width: 100%;
+	/* Tamaño fijo de 320px resolucion minima de smartphones */
+	min-width: 320px;
+	max-width: 320px;
 	height: 100%;
 	background: orange;
-	float: left;
 }
-.seccion-container .col1-container .contenido-container .contenido .aside
+.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-2
 {
-	width: 205px;
-	height: 100%;
-	background: green;
-	float: left;
-	display: none;
-}
-.seccion-container .col1-container .contenido-container .contenido .caja-de-2
-{
-	width: 400px;
-	height: 100%;
+	width: 100%;
+	/* Tamaño fijo de 320px resolucion minima de smartphones */
+	min-width: 320px;
+	max-width: 320px;
 	background: blue;
-	float: left;
 }
-.seccion-container .col1-container .contenido-container .contenido .caja-de-3
+.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-3
 {
-	width: 400px;
+	width: 100%;
+	/* Tamaño fijo de 320px resolucion minima de smartphones */
+	min-width: 320px;
+	max-width: 320px;
 	height: 100%;
 	background: purple;
-	float: left;
 } 
 
 /* Breakpoint inicial, la minima resolucion es 400px, para lo que sigue se empieza a cambiar propiedades */
-@media screen and (min-width: 400px){
-	.seccion-container
+@media screen and (min-width: 320px){
+	.seccion-container .contenido-container
 	{
 		/* Padding hasta el prox breakpoint de resolucion 480 */
 		padding-left: 0%;
@@ -91,29 +95,33 @@ header{
 		width: 100%;
 	}
 }
-@media screen and (min-width: 414px){
-	.seccion-container
+@media screen and (min-width: 370.4px){
+	.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-1-small
 	{
+		/* Tamaño especifico para mayores resoluciones y se flota a partir de aqui */
+		min-width: 122.4px;
+		max-width: 122.4px;
+		float: left;
+	}
+	.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-1
+	{
+		/* Tamaño especifico para mayores resoluciones y se flota a partir de aqui */
+		min-width: 248.4px;
+		max-width: 248.4px;
+		height: 100%;
+		float: left;
+	}
+	.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-2
+	{
+		min-width: 370.8px;
+		max-width: 370.8px;
 
 	}
-	.seccion-container .col1-container .contenido-container .contenido .caja-de-1-small
+	.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-3
 	{
-		width: 122.4px;
-	}
-	.seccion-container .col1-container .contenido-container .contenido .caja-de-1
-	{
-		width: 248.4px;
-	}
-	.seccion-container .col1-container .contenido-container .contenido .caja-de-2
-	{
-		width: 496.8px;
-	}
-	.seccion-container .col1-container .contenido-container .contenido .caja-de-3
-	{
-		width: 410px;
-	}
-
-
+		min-width: 370.8px;
+		max-width: 370.8px;
+	} 
 }
 @media screen and (min-width: 480px){
 	.seccion-container
@@ -122,26 +130,26 @@ header{
 		padding-right: 3%;
 		width: 94%;
 	}
-	.seccion-container .col1-container .contenido-container .contenido
+	.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-2
 	{
-		min-width: 410px;
+		min-width: 496.8px;
+		max-width: 496.8px;
+
 	}
-.seccion-container .col1-container .contenido-container .contenido .caja-de-3
+	.seccion-container .contenido-container .col1-container .ren-contenido .caja-de-3
 	{
-		width: 662.4px;
-	}
+		min-width: 370.8px;
+		max-width: 370.8px;
+	} 
 }
 @media screen and (min-width: 640px){
 	.seccion-container
 	{
 		padding-left: 3%;
 		padding-right: 3%;
-		width: 96%;
+		width: 94%;
 	}
-	.seccion-container .col1-container .contenido-container .contenido
-	{
-		max-width: 662.4px;
-	}
+
 }
 @media screen and (min-width: 720px){
 	.seccion-container
@@ -149,10 +157,6 @@ header{
 		padding-left: 7%;
 		padding-right: 7%;
 		width: 86%;
-	}
-	.seccion-container .col1-container .contenido-container .contenido
-	{
-		max-width: 662.4px;
 	}
 }
 @media screen and (min-width: 800px){
@@ -162,27 +166,15 @@ header{
 		padding-right: 7%;
 		width: 86%;
 	}
-	.seccion-container .col1-container .contenido-container .contenido
-	{
-		max-width: 662.4px;
-	}
 }
 @media screen and (min-width: 1024px){
 	.seccion-container
 	{
-		padding-left: 10%;
-		padding-right: 10%;
-		width: 80%;
+		padding-left: 7%;
+		padding-right: 7%;
+		width: 86%;
 	}
-	.seccion-container .col1-container .contenido-container .contenido
-	{
-		max-width: 720px;
-	}
-	.seccion-container .col1-container .contenido-container .contenido .aside
-	{
-		display: block;
-	}
-	.seccion-container .col2-aside
+	.seccion-container .contenido-container .col2-aside
 	{
 		display: block;
 		float: right;

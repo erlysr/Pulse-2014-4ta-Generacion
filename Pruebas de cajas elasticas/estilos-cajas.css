@@ -1,0 +1,29 @@
+body
+{
+	border: 0 0 0 0;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+header{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.seccion-container
+{	
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 90%;
+
+  	/* Para que el contenedor sea maximo a 1024px y siempre quede centrado */
+  	margin: 0 auto;
+  	overflow: hidden;
+  	background: gray;
+}
+.seccion-container .caja-de-1-small
+{
+	background: orange;
+	width: 100%;
+	min-width: 600px;
+	max-width: 800px;
+}
